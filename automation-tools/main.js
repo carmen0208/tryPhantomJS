@@ -7,10 +7,11 @@ var casper = require('casper').create();
 casper.start('http://www.google.co.nz/', function(){
   // this.capture('./output/test.png');
   var message = "this current page title is :"
-  var title = this.evaluate(function(message){
-    var title = document.title;
-    return message + title;
-  },message);
+  // var title = this.evaluate(function(message){
+  //   var title = document.title;
+  //   // return message + title;
+  // },message);
+  var title = this.getTitle();
   console.log(title);
 });
 // casper.thenOpen('http://www.bing.com/',function(){

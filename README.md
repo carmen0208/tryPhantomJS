@@ -48,3 +48,20 @@ npm install phantomjs-prebuilt --save
    ./node_modules/.bin/casperjs
 
    ```
+
+#### Useful Functions of CasperJS
+
+* getTitle()
+
+  Get the current page title
+
+* getCurrentUrl()
+  
+  Gets the Url of the current page
+
+* getHTML()
+
+  Retrives HTML from the current page(Useful for debugging)
+
+  [[learn more at|http://docs.casperjs.org/en/latest/modules/casper.html]]
+
