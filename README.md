@@ -65,3 +65,16 @@ npm install phantomjs-prebuilt --save
 
   [[learn more at|http://docs.casperjs.org/en/latest/modules/casper.html]]
 
+#### How to check userAgency and how to modify browser's userAgency
+
+```javascript
+console.log(window.navigator.userAgent);
+```
+
+* Config Chrome's UserAgency
+   * use device ToolBar
+   * Edit -> add custom device
+      * name: casperJS
+      * 1000* 2000
+      * Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) CasperJS/1.1.3+PhantomJS/2.1.1 Safari/538.1
+
