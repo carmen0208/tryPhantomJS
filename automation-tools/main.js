@@ -1,4 +1,6 @@
 var casper = require('casper').create();
+var fs = require('fs');
+var data;
 // console.log('hello world');
 // casper.echo('hello world', 'INFO');
 // casper.echo('hello world', 'ERROR');
@@ -22,7 +24,7 @@ casper.start('http://www.google.co.nz/', function(){
 });
 casper.wait(1000,function(){
   // this.capture('./output/test.png');
-  var data = this.evaluate(function() {
+  data = this.evaluate(function() {
     // var targetEl = document.querySelectorAll('.g > .rc > h3');
     // console.log(targetEl, targeEl.length);
     // console.log(window.navigator.userAgent);
@@ -44,7 +46,9 @@ casper.wait(1000,function(){
 
     return data;
   });
-    // console.log('ok');
-  console.log(JSON.stringify(data));
+  // console.log(JSON.stringify(data));
 });
-casper.run();
+casper.run(function(){
+  fs.write('./output.json',JSON.stringify(data, null, '\t'));
+  this.exit();
+});
