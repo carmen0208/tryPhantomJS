@@ -56,7 +56,7 @@ npm install phantomjs-prebuilt --save
   Get the current page title
 
 * getCurrentUrl()
-  
+
   Gets the Url of the current page
 
 * getHTML()
@@ -78,3 +78,24 @@ console.log(window.navigator.userAgent);
       * 1000* 2000
       * Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) CasperJS/1.1.3+PhantomJS/2.1.1 Safari/538.1
 
+## Visual Regression Testing :
+
+#### Concept:
+* Capturing Screenshot
+* Comparing Images
+
+#### Tools
+
+* [Wraith by BBC ](https://github.com/BBC-News/wraith)
+* [PhantomJS ](https://github.com/Huddle/PhantomCSS)
+* [Gemini by Yandex](https://github.com/gemini-testing/gemini)
+* tools only comparing Images
+   * [ImageMagick](https://github.com/rsms/node-imagemagick)
+   * [GraphicsMagick](http://aheckmann.github.io/gm/)
+   * [Resemble.js](https://huddle.github.io/Resemble.js/)
+#### Resources
+
+* https://www.thoughtworks.com/radar/tools/visual-regression-testing-tools
+* http://www.kevinlamping.com/hands-on-visual-regression-testing/
+* http://abhishek-tiwari.com/post/visual-regression
+* http://laurent.bristiel.com/visual-regression-tests/
