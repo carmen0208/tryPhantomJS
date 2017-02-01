@@ -16,9 +16,14 @@ function checkSelectorForAttr(selector, attr) {
   return results;
 }
 
+casper.options.remoteScripts.push('https://code.jquery.com/jquery-2.2.3.min.js');
+
 casper.test.begin('Testing the status', function(test) {
   casper.start(url,function(){
     // test.assertHttpStatus(200,'Page is up and running');
+    this.evaluate(function(){
+      $.noConflict();
+    });
   });
   casper.then(function(){
     // test.assert(casper.getCurrentUrl() === url, 'URL is the one expected');
